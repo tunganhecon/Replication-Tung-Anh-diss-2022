@@ -82,3 +82,7 @@ drop IR GDPtrend CPItrend deGDP deCPI lnGDP lnCPI
 keep if qdate > yq(2000, 4)
 
 export excel using "VNdata", firstrow(variables) nolabel keepcellfmt
+
+keep if qdate > yq(2016, 1) 
+
+export excel using "VNdatasub", firstrow(variables) nolabel keepcellfmt
